@@ -1,10 +1,12 @@
 import funcionalities.bot_config as conf
-bot = conf.bot 
+
+bot = conf.bot
 
 def on_ready():
     print('Bot Online - hello world!')
     print('-'*25)
     bot.run(conf.TOKEN)
+    conf.on_ready()
 
 @bot.command()
 async def repeat(ctx, *args):
