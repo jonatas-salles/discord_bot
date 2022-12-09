@@ -1,3 +1,8 @@
-from funcionalities.bot_config import run_bot
+from funcionalities.basics import *
 
-run_bot()
+
+on_ready()
+
+repeat(conf.discord.ext.Context.message)
+
+ping(conf.discord.ext.Context.message)
