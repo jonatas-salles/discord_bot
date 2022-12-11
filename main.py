@@ -9,3 +9,5 @@ repeat(conf.discord.ext.Context.message)
 ping(conf.discord.ext.Context.message)
 
 roll(conf.discord.ext.Context.message)
+
+userinfo(conf.discord.ext.Context.message)
