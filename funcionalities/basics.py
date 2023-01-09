@@ -10,7 +10,8 @@ def on_ready():
 
 @bot.command()
 async def repeat(ctx, *args):
-    arguments = ', '.join(args)
+    arguments = ' '.join(args)
+    print(arguments)
     await ctx.send(f'{arguments}')
 
 @bot.command()
@@ -31,11 +32,3 @@ async def userinfo(ctx, member: conf.discord.Member=None):
     embed.add_field(name='Joined', value=member.joined_at.strftime(f'%a, %b %d, %Y %I:%M %p'))
     embed.add_field(name='Registered', value=member.created_at.strftime(f'%a, %b %d, %Y %I:%M %p'))
     await ctx.reply(embed = embed)
-
-# --- test
-#   embed = conf.discord.Embed(
-#             title = ctx.author,-
-#             description =  arguments,
-#             color = 16777113
-#     )
-#     await ctx.send(embed = embed)
